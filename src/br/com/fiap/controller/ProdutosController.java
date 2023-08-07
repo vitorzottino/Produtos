@@ -1,6 +1,7 @@
 package br.com.fiap.controller;
 
 import java.sql.Connection;
+import java.util.List;
 
 import br.com.fiap.dao.ProdutosDAO;
 import br.com.fiap.factory.ConnectionFactory;
@@ -19,5 +20,8 @@ public class ProdutosController {
 		this.produtoDAO.salvarComCategoria(produto);
 	}
 	
+	public List<Produtos> listarTodos(){
+		return this.produtoDAO.listarTodos();
+	}
 
 }

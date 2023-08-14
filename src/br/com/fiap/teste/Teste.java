@@ -2,32 +2,23 @@ package br.com.fiap.teste;
 
 import java.util.List;
 
-import br.com.fiap.controller.ProdutosController;
-import br.com.fiap.model.Produtos;
+import br.com.fiap.controller.CategoriaController;
+import br.com.fiap.model.Categorias;
 
 public class Teste {
 
 	public static void main(String[] args) {
-		
-		
-		ProdutosController controlador = new ProdutosController();
-		Produtos produto1 = new Produtos("iPhone 15", "Celular de ultima geracao top", 1);
-		
-		
-	
-		
-		
-		List<Produtos> listaProdutos = controlador.listarTodos();
-		
-		
-		for (Produtos produto : listaProdutos) {
-			
-			System.out.println(produto.toString());
-			
+
+		CategoriaController controleCategoria = new CategoriaController();
+
+		List<Categorias> listaCategorias = controleCategoria.listarCategoriasComProdutos();
+
+		for (Categorias categorias : listaCategorias) {
+
+			System.out.println(categorias.toString());
+
 		}
 
 	}
-	
-	
 
 }

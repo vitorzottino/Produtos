@@ -34,9 +34,20 @@ public class Categorias {
 		this.nome = nome;
 	}
 	
-	public void preencherLista(Produtos produto) {
+	public void adicionaProduto(Produtos produto) {
 		listaProdutos.add(produto);
 		
 	}
+	
+	public List<Produtos> getProdutos(){
+		return this.listaProdutos;
+	}
 
+	@Override
+	public String toString() {
+		return "Categorias [\nidCategoria=" + idCategoria + ", nome=" + nome + ", \nlistaProdutos=" + listaProdutos + "]";
+	}
+
+	
+	
 }
